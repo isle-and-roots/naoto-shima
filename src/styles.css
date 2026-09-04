@@ -352,6 +352,14 @@ button {
   color: var(--color-aubergine);
 }
 
+/* Bone-on-bone would vanish; lift the tag onto Paper White inside light panels. */
+.section--bone .tag--ghost,
+.card--bone .tag--ghost,
+.case-teaser:hover .tag--ghost {
+  background: var(--color-paper-white);
+  border-color: var(--color-ash);
+}
+
 .tag--paper {
   background: var(--color-paper-white);
   color: var(--color-aubergine);
