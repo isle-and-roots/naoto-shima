@@ -4,20 +4,20 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ["**/dist/**", "**/node_modules/**", "**/coverage/**"],
+    ignores: ["**/dist/**", "**/node_modules/**", "**/coverage/**", "**/.wrangler/**"],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    files: ["server/**/*.ts"],
+    files: ["src/**/*.{ts,tsx}"],
     languageOptions: {
-      globals: { ...globals.node },
+      globals: { ...globals.browser },
     },
   },
   {
-    files: ["web/**/*.{ts,tsx}"],
+    files: ["vite.config.ts"],
     languageOptions: {
-      globals: { ...globals.browser },
+      globals: { ...globals.node },
     },
   },
   {
