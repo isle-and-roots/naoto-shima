@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Workers with static assets — no Worker script, assets only.
+  "name": "naoto-shima",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist",
+    // `/case-aiops` serves `case-aiops.html`; `/case-aiops/` redirects to it.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
