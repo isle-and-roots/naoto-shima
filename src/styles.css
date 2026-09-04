@@ -561,6 +561,8 @@ button {
   height: 40px;
   border-radius: var(--radius-pill);
   background: var(--color-aubergine);
+  /* Invisible on light canvases, outlines the mark when the header floats over dark sections. */
+  border: 1px solid var(--color-paper-white);
 }
 
 .logo__mark .ghost {
